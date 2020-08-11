@@ -33,6 +33,7 @@ steps:
     
 - task: ArchiveFiles@2
   inputs:
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
     archiveType: tar
@@ -45,5 +46,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs: 
-    pathtoPublish: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).tar.gz'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
     ArtifactName: 'app' # output artifact named www
