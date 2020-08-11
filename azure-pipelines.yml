@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'fleetweb-tst'
+  name: 'Default'
 
 steps:
 - task: NodeTool@0
