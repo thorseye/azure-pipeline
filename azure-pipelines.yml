@@ -33,7 +33,7 @@ steps:
     
 - task: CopyFiles@2
   inputs:
-    Contents: './**' # Pull the build directory (React)
+    Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
